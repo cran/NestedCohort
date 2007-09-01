@@ -1,0 +1,24 @@
+citHeader("To cite NestedCohort in publications use:")
+
+citEntry(entry="Article",
+  			author = personList(as.person("Steven D. Mark"), 
+                             as.person("Hormuzd A. Katki")),
+  			title = "Specifying and Implementing Nonparametric and Semiparametric Survival Estimators in Two-Stage (sampled) Cohort Studies with Missing Case Data",
+  			journal = "Journal of the American Statistical Association",
+  			year = "2006",
+  			volume = "101",
+  			pages = "460-471",
+  			number = "474",
+  			doi = "10.1198/016214505000000952", 
+       
+         textVersion = 
+         paste("Mark, S.D. and Katki, H.A. ", 
+               "Specifying and Implementing Nonparametric and Semiparametric Survival Estimators in Two-Stage (sampled) Cohort Studies with Missing Case Data. ",
+               "Journal of the American Statistical Association, 2006, 101, 460-471. ",
+               sep="")
+         )
+
+citFooter("We have invested a lot of time and effort in creating NestedCohort,",
+          "please cite it when using it for data analysis.",
+	  "See also", sQuote("citation(\"pkgname\")"),
+	  "for citing R packages.")

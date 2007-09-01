@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Overview}{1}
+\contentsline {section}{\numberline {2}Case Study: Zinc and Esophageal Cancer dataset of\nobreakspace {}\cite {Abnet:05}}{2}
+\contentsline {section}{\numberline {3}Specifying the Sampling Model}{4}
+\contentsline {section}{\numberline {4}Kaplan-Meier Curves}{5}
+\contentsline {subsection}{\numberline {4.1}Plotting Kaplan-Meier Curves}{7}
+\contentsline {subsection}{\numberline {4.2}Aside: Using \texttt {survfit} with weights}{9}
+\contentsline {section}{\numberline {5}Relative Risks (Hazard Ratios)}{9}
+\contentsline {section}{\numberline {6}Standardized Survival and Attributable Risks}{10}
+\contentsline {section}{\numberline {7}Other topics}{11}
+\contentsline {subsection}{\numberline {7.1}How to use auxiliary variables like surrogates or variables on the causal pathway}{11}
+\contentsline {subsection}{\numberline {7.2}How to fit multiple exposures with missing values}{13}
+\contentsline {subsection}{\numberline {7.3}Full cohort analysis}{15}
+\contentsline {subsection}{\numberline {7.4}Importing data into R from plain text, SAS, Stata, or Excel}{15}

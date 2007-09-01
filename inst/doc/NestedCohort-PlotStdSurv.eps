@@ -1,0 +1,678 @@
+%!PS-Adobe-3.0
+%%DocumentNeededResources: font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Helvetica-Oblique
+%%+ font Helvetica-BoldOblique
+%%+ font Symbol
+%%DocumentMedia: special 432 432 0 () ()
+%%Title: R Graphics Output
+%%Creator: R Software
+%%Pages: (atend)
+%%BoundingBox: 0 0 432 432
+%%EndComments
+%%BeginProlog
+/bp  { gs gs } def
+% begin .ps.prolog
+/gs  { gsave } def
+/gr  { grestore } def
+/ep  { showpage gr gr } def
+/m   { moveto } def
+/l  { rlineto } def
+/np  { newpath } def
+/cp  { closepath } def
+/f   { fill } def
+/o   { stroke } def
+/c   { newpath 0 360 arc } def
+/r   { 4 2 roll moveto 1 copy 3 -1 roll exch 0 exch rlineto 0 rlineto -1 mul 0 exch rlineto closepath } def
+/p1  { stroke } def
+/p2  { gsave bg fill grestore newpath } def
+/p3  { gsave bg fill grestore stroke } def
+/t   { 6 -2 roll moveto gsave rotate
+       ps mul neg 0 2 1 roll rmoveto
+       1 index stringwidth pop
+       mul neg 0 rmoveto show grestore } def
+/cl  { grestore gsave newpath 3 index 3 index moveto 1 index
+       4 -1 roll lineto  exch 1 index lineto lineto
+       closepath clip newpath } def
+/rgb { setrgbcolor } def
+/s   { scalefont setfont } def
+% end   .ps.prolog
+% begin encoding
+/WinAnsiEncoding [
+ /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+ /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+ /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+ /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+ /space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quoteright
+ /parenleft /parenright /asterisk /plus /comma /minus /period /slash
+ /zero /one /two /three /four /five /six /seven
+ /eight /nine /colon /semicolon /less /equal /greater /question
+ /at /A /B /C /D /E /F /G
+ /H /I /J /K /L /M /N /O
+ /P /Q /R /S /T /U /V /W
+ /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+ /grave /a /b /c /d /e /f /g
+ /h /i /j /k /l /m /n /o
+ /p /q /r /s /t /u /v /w
+ /x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+ /Euro /.notdef /quotesinglbase /florin /quotedblbase /ellipsis /dagger /daggerdbl
+ /circumflex /perthousand /Scaron /guilsinglleft /OE /.notdef /Zcaron /.notdef
+ /.notdef /quoteleft /quoteright /quotedblleft /quotedblright /bullet /endash /emdash
+ /tilde /trademark /scaron /guilsinglright /oe /.notdef /zcaron /Ydieresis
+ /space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+ /dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+ /degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+ /cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+ /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+ /Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+ /Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+ /Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+ /agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+ /egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+ /eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+ /oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis
+]
+ def
+% end encoding
+%%IncludeResource: font Helvetica
+/Helvetica findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+  end
+/Font1 exch definefont pop
+%%IncludeResource: font Helvetica-Bold
+/Helvetica-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+  end
+/Font2 exch definefont pop
+%%IncludeResource: font Helvetica-Oblique
+/Helvetica-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+  end
+/Font3 exch definefont pop
+%%IncludeResource: font Helvetica-BoldOblique
+/Helvetica-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+  end
+/Font4 exch definefont pop
+%%IncludeResource: font Symbol
+/Symbol findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  currentdict
+  end
+/Font5 exch definefont pop
+%%EndProlog
+%%Page: 1 1
+bp
+0.00 0.00 432.00 432.00 cl
+0 setgray
+0.75 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+71.73 73.44 m
+323.10 0 l
+o
+np
+71.73 73.44 m
+0 -7.20 l
+o
+np
+125.58 73.44 m
+0 -7.20 l
+o
+np
+179.43 73.44 m
+0 -7.20 l
+o
+np
+233.28 73.44 m
+0 -7.20 l
+o
+np
+287.13 73.44 m
+0 -7.20 l
+o
+np
+340.98 73.44 m
+0 -7.20 l
+o
+np
+394.83 73.44 m
+0 -7.20 l
+o
+/ps 12 def /Font1 findfont 12 s
+71.73 47.52 (0) .5 0 0 t
+125.58 47.52 (1000) .5 0 0 t
+179.43 47.52 (2000) .5 0 0 t
+233.28 47.52 (3000) .5 0 0 t
+287.13 47.52 (4000) .5 0 0 t
+340.98 47.52 (5000) .5 0 0 t
+394.83 47.52 (6000) .5 0 0 t
+np
+59.04 100.47 m
+0 261.40 l
+o
+np
+59.04 100.47 m
+-7.20 0 l
+o
+np
+59.04 144.04 m
+-7.20 0 l
+o
+np
+59.04 187.61 m
+-7.20 0 l
+o
+np
+59.04 231.17 m
+-7.20 0 l
+o
+np
+59.04 274.74 m
+-7.20 0 l
+o
+np
+59.04 318.30 m
+-7.20 0 l
+o
+np
+59.04 361.87 m
+-7.20 0 l
+o
+41.76 100.47 (0.4) .5 0 90 t
+41.76 144.04 (0.5) .5 0 90 t
+41.76 187.61 (0.6) .5 0 90 t
+41.76 231.17 (0.7) .5 0 90 t
+41.76 274.74 (0.8) .5 0 90 t
+41.76 318.30 (0.9) .5 0 90 t
+41.76 361.87 (1.0) .5 0 90 t
+np
+59.04 73.44 m
+342.72 0 l
+0 299.52 l
+-342.72 0 l
+0 -299.52 l
+o
+0.00 0.00 432.00 432.00 cl
+/ps 14 def /Font2 findfont 14 s
+0 setgray
+230.40 397.45 (Time to Esophageal Cancer by Quartiles of Zinc) .5 0 0 t
+/ps 12 def /Font1 findfont 12 s
+230.40 18.72 (Time) .5 0 0 t
+12.96 223.20 (Standardized Survival) .5 0 90 t
+59.04 73.44 401.76 372.96 cl
+0 setgray
+0.75 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+71.73 361.87 m
+8.78 0 l
+0 -3.91 l
+8.35 0 l
+0 -3.41 l
+22.34 0 l
+0 -3.42 l
+14.44 0 l
+0 -3.94 l
+0.10 0 l
+0 -4.46 l
+0.11 0 l
+0 -3.96 l
+1.67 0 l
+0 -2.77 l
+0.05 0 l
+0 -4.07 l
+0.06 0 l
+0 -4.44 l
+0.21 0 l
+0 -3.93 l
+0.22 0 l
+0 -7.22 l
+0.54 0 l
+0 -3.75 l
+0.16 0 l
+0 -3.70 l
+0.11 0 l
+0 -3.22 l
+0.16 0 l
+0 -15.32 l
+0.05 0 l
+0 -3.46 l
+0.11 0 l
+0 -3.54 l
+0.16 0 l
+0 -5.83 l
+0.16 0 l
+0 -3.50 l
+0.11 0 l
+0 -3.88 l
+0.06 0 l
+0 -9.42 l
+5.65 0 l
+0 -3.48 l
+18.36 0 l
+0 -2.57 l
+13.95 0 l
+0 -3.56 l
+7.43 0 l
+0 -3.63 l
+8.78 0 l
+0 -3.61 l
+8.88 0 l
+0 -9.50 l
+1.29 0 l
+0 -3.53 l
+28.28 0 l
+0 -4.06 l
+14.16 0 l
+0 -3.70 l
+4.58 0 l
+0 -7.70 l
+9.10 0 l
+0 -3.94 l
+6.46 0 l
+0 -3.88 l
+14.70 0 l
+0 -3.46 l
+14.38 0 l
+0 -4.20 l
+7.27 0 l
+0 -3.59 l
+1.67 0 l
+0 -3.59 l
+0.21 0 l
+0 -3.66 l
+0.59 0 l
+0 -3.98 l
+2.37 0 l
+0 -3.40 l
+9.26 0 l
+0 -3.01 l
+28.49 0 l
+0 -3.95 l
+15.62 0 l
+0 -4.02 l
+5.65 0 l
+0 -4.51 l
+3.07 0 l
+0 -3.97 l
+17.39 0 l
+0 -4.03 l
+8.78 0 l
+0 -6.96 l
+3.02 0 l
+0 -4.86 l
+o
+np
+389.07 84.53 m
+0 116.66 l
+o
+np
+385.89 84.53 m
+6.35 0 l
+o
+np
+385.89 201.19 m
+6.35 0 l
+o
+/ps 12 def /Font1 findfont 12 s
+389.07 131.99 (Q1) .5 0 0 t
+np
+71.73 361.87 m
+8.78 0 l
+0 -1.59 l
+8.35 0 l
+0 -1.39 l
+22.34 0 l
+0 -1.42 l
+14.44 0 l
+0 -1.65 l
+0.10 0 l
+0 -1.88 l
+0.11 0 l
+0 -1.69 l
+1.67 0 l
+0 -1.19 l
+0.05 0 l
+0 -1.78 l
+0.06 0 l
+0 -1.95 l
+0.21 0 l
+0 -1.75 l
+0.22 0 l
+0 -3.25 l
+0.54 0 l
+0 -1.72 l
+0.16 0 l
+0 -1.71 l
+0.11 0 l
+0 -1.51 l
+0.16 0 l
+0 -7.32 l
+0.05 0 l
+0 -1.70 l
+0.11 0 l
+0 -1.75 l
+0.16 0 l
+0 -2.92 l
+0.16 0 l
+0 -1.77 l
+0.11 0 l
+0 -1.98 l
+0.06 0 l
+0 -4.91 l
+5.65 0 l
+0 -1.84 l
+18.36 0 l
+0 -1.37 l
+13.95 0 l
+0 -1.92 l
+7.43 0 l
+0 -1.97 l
+8.78 0 l
+0 -1.98 l
+8.88 0 l
+0 -5.30 l
+1.29 0 l
+0 -2.01 l
+28.28 0 l
+0 -2.33 l
+14.16 0 l
+0 -2.14 l
+4.58 0 l
+0 -4.54 l
+9.10 0 l
+0 -2.36 l
+6.46 0 l
+0 -2.34 l
+14.70 0 l
+0 -2.12 l
+14.38 0 l
+0 -2.59 l
+7.27 0 l
+0 -2.24 l
+1.67 0 l
+0 -2.27 l
+0.21 0 l
+0 -2.33 l
+0.59 0 l
+0 -2.57 l
+2.37 0 l
+0 -2.22 l
+9.26 0 l
+0 -1.98 l
+28.49 0 l
+0 -2.63 l
+15.62 0 l
+0 -2.70 l
+5.65 0 l
+0 -3.08 l
+3.07 0 l
+0 -2.74 l
+17.39 0 l
+0 -2.81 l
+8.78 0 l
+0 -4.97 l
+3.02 0 l
+0 -3.52 l
+o
+np
+389.07 162.74 m
+0 133.83 l
+o
+np
+385.89 162.74 m
+6.35 0 l
+o
+np
+385.89 296.57 m
+6.35 0 l
+o
+389.07 229.79 (Q2) .5 0 0 t
+np
+71.73 361.87 m
+8.78 0 l
+0 -2.05 l
+8.35 0 l
+0 -1.79 l
+22.34 0 l
+0 -1.82 l
+14.44 0 l
+0 -2.11 l
+0.10 0 l
+0 -2.41 l
+0.11 0 l
+0 -2.15 l
+1.67 0 l
+0 -1.52 l
+0.05 0 l
+0 -2.25 l
+0.06 0 l
+0 -2.48 l
+0.21 0 l
+0 -2.21 l
+0.22 0 l
+0 -4.11 l
+0.54 0 l
+0 -2.15 l
+0.16 0 l
+0 -2.15 l
+0.11 0 l
+0 -1.88 l
+0.16 0 l
+0 -9.13 l
+0.05 0 l
+0 -2.10 l
+0.11 0 l
+0 -2.17 l
+0.16 0 l
+0 -3.60 l
+0.16 0 l
+0 -2.18 l
+0.11 0 l
+0 -2.43 l
+0.06 0 l
+0 -6.00 l
+5.65 0 l
+0 -2.24 l
+18.36 0 l
+0 -1.66 l
+13.95 0 l
+0 -2.33 l
+7.43 0 l
+0 -2.39 l
+8.78 0 l
+0 -2.39 l
+8.88 0 l
+0 -6.38 l
+1.29 0 l
+0 -2.40 l
+28.28 0 l
+0 -2.79 l
+14.16 0 l
+0 -2.56 l
+4.58 0 l
+0 -5.39 l
+9.10 0 l
+0 -2.79 l
+6.46 0 l
+0 -2.77 l
+14.70 0 l
+0 -2.49 l
+14.38 0 l
+0 -3.06 l
+7.27 0 l
+0 -2.62 l
+1.67 0 l
+0 -2.65 l
+0.21 0 l
+0 -2.73 l
+0.59 0 l
+0 -2.99 l
+2.37 0 l
+0 -2.57 l
+9.26 0 l
+0 -2.30 l
+28.49 0 l
+0 -3.03 l
+15.62 0 l
+0 -3.13 l
+5.65 0 l
+0 -3.53 l
+3.07 0 l
+0 -3.14 l
+17.39 0 l
+0 -3.22 l
+8.78 0 l
+0 -5.64 l
+3.02 0 l
+0 -3.99 l
+o
+np
+389.07 146.87 m
+0 126.10 l
+o
+np
+385.89 146.87 m
+6.35 0 l
+o
+np
+385.89 272.97 m
+6.35 0 l
+o
+389.07 205.62 (Q3) .5 0 0 t
+np
+71.73 361.87 m
+8.78 0 l
+0 -0.48 l
+8.35 0 l
+0 -0.42 l
+22.34 0 l
+0 -0.42 l
+14.44 0 l
+0 -0.50 l
+0.10 0 l
+0 -0.57 l
+0.11 0 l
+0 -0.52 l
+1.67 0 l
+0 -0.37 l
+0.05 0 l
+0 -0.55 l
+0.06 0 l
+0 -0.60 l
+0.21 0 l
+0 -0.55 l
+0.22 0 l
+0 -1.03 l
+0.54 0 l
+0 -0.54 l
+0.16 0 l
+0 -0.55 l
+0.11 0 l
+0 -0.48 l
+0.16 0 l
+0 -2.39 l
+0.05 0 l
+0 -0.56 l
+0.11 0 l
+0 -0.58 l
+0.16 0 l
+0 -0.98 l
+0.16 0 l
+0 -0.59 l
+0.11 0 l
+0 -0.67 l
+0.06 0 l
+0 -1.69 l
+5.65 0 l
+0 -0.63 l
+18.36 0 l
+0 -0.48 l
+13.95 0 l
+0 -0.67 l
+7.43 0 l
+0 -0.70 l
+8.78 0 l
+0 -0.70 l
+8.88 0 l
+0 -1.90 l
+1.29 0 l
+0 -0.73 l
+28.28 0 l
+0 -0.85 l
+14.16 0 l
+0 -0.79 l
+4.58 0 l
+0 -1.68 l
+9.10 0 l
+0 -0.89 l
+6.46 0 l
+0 -0.88 l
+14.70 0 l
+0 -0.81 l
+14.38 0 l
+0 -1.00 l
+7.27 0 l
+0 -0.86 l
+1.67 0 l
+0 -0.89 l
+0.21 0 l
+0 -0.91 l
+0.59 0 l
+0 -1.02 l
+2.37 0 l
+0 -0.88 l
+9.26 0 l
+0 -0.80 l
+28.49 0 l
+0 -1.06 l
+15.62 0 l
+0 -1.10 l
+5.65 0 l
+0 -1.27 l
+3.07 0 l
+0 -1.14 l
+17.39 0 l
+0 -1.18 l
+8.78 0 l
+0 -2.10 l
+3.02 0 l
+0 -1.52 l
+o
+np
+389.07 244.95 m
+0 102.49 l
+o
+np
+385.89 244.95 m
+6.35 0 l
+o
+np
+385.89 347.44 m
+6.35 0 l
+o
+389.07 305.01 (Q4) .5 0 0 t
+ep
+%%Trailer
+%%Pages: 1
+%%EOF
