@@ -1,7 +1,7 @@
 nested.coxph <-
   ##
   # Compute Cox model hazard ratios from studies nested within cohorts
-  # By: Hormuzd Katki 3/4/04
+  # By: Hormuzd Katki 4/10/09
   ##
   function(coxformula, samplingmod, data, outputsamplingmod = FALSE,
            glmlink =binomial(link="logit"),

@@ -6,7 +6,7 @@
 \documentclass[10pt]{article}
 \usepackage{fullpage}
 \usepackage{psfig}
-\usepackage{S}
+%\usepackage{S}
 \usepackage{apalike}
 \newcommand{\bex}{\begin{Example}}
   \newcommand{\eex}{\end{Example}}
@@ -62,7 +62,8 @@ email: \texttt{katkih@mail.nih.gov}}
 The \texttt{NestedCohort} package provides functions that perform survival analysis (Cox
 model and Kaplan-Meier) on studies nested within cohorts to estimate hazard ratios,
 survival probabilities and attributable risks, all standardized for
-confounders~\cite{Mark:Katki:06}.  
+confounders~\cite{Mark:Katki:06}.  For our \emph{R News} article that gives some extra
+details, see~\cite{Katki:Mark:08}.
 
 A study nested within a cohort is any cohort study on which a covariate is observed only
 on a sample of all cohort members (call this covariate the exposure, to distinguish it
@@ -604,6 +605,11 @@ Abnet, C.~C., Lai, B., Qiao, Y.-L., Vogt, S., Luo, X.-M., Taylor, P.~R., Dong,
 \newblock Zinc concentration in esophageal biopsies measured by x-ray
   fluorescence and cancer risk.
 \newblock {\em Journal of the National Cancer Institute}, 97(4):301--306.
+
+\bibitem[Katki and Mark, 2008]{Katki:Mark:08}
+Katki, H.~A. and Mark, S.~D. (2006).
+\newblock Survival Analysis for Cohorts with Missing Covariate Information.
+\newblock {\em R News}, 8(1):14--19.
 
 \bibitem[Mark and Katki, 2006]{Mark:Katki:06}
 Mark, S.~D. and Katki, H.~A. (2006).

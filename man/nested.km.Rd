@@ -36,14 +36,14 @@ nested.km(survfitformula, samplingmod, data, outputsamplingmod=FALSE,
   Optional arguments:
   \item{outputsamplingmod}{ Output the sampling model, default is false}
   \item{outputriskdiff}{ Output risk differences, default is false }
-  \item{exposureofinterest} { Exposure level to make risk differences with
+  \item{exposureofinterest}{ Exposure level to make risk differences with
 respect to }
-  \item{timeofinterest} { Time at which to report risk differenes,
+  \item{timeofinterest}{ Time at which to report risk differenes,
 default is end of followup }
   \item{glmlink}{ Sampling model link function, default is logistic regression }
   \item{glmcontrol}{ See \code{\link{glm.control}} }
-  \item{missvarwarn} { Warn if there is missing data in the sampling
-	 variable. default is true }
+  \item{missvarwarn}{ Warn if there is missing data in the sampling
+	 variable. Default is TRUE }
   \item{\dots}{ Any additional arguments to be passed on to \code{\link{survfit}} }
 }
 
@@ -58,17 +58,17 @@ default is end of followup }
   cannot converge, but you get very close to 1, and \code{nested.km}
   will not report non-convergence for this situation.
   
-  Some caveats:
-  \item{1. }{ The data must be in a dataframe and specified in the data statement}
-  \item{2. }{ No variable in the dataframe can be named 'o.b.s.e.r.v.e.d.' or 'p.i.h.a.t.'}
-  \item{3. }{ Cases and controls cannot be finely matched on time, but
-	 frequency matching on time within large strata is allowed }
-  \item{4. }{ Everyone must enter the cohort at the same time on the
-	 chosen survival time scale.}
-  \item{5. }{ All covariates in the survfitformula must be factor
-	 variables, even if binary}
-  \item{6. }{ Never use '*' to mean interaction in the survfitformula,
-	 instead use \code{\link{interaction}}} 
+  Note these issues.
+  The data must be in a dataframe and specified in the data statement.
+  No variable in the dataframe can be named 'o.b.s.e.r.v.e.d.' or 'p.i.h.a.t.'.
+  Cases and controls cannot be finely matched on time, but
+  matching on time within large strata is allowed.
+  Everyone must enter the cohort at the same time on the
+  vival time scale.
+  All covariates in the survfitformula must be factor
+   even if binary.
+  Never use '*' to mean interaction in the survfitformula,
+	 instead use \code{\link{interaction}}.
 }
 
 \value{
@@ -86,6 +86,10 @@ default is end of followup }
 }
 
 \references{ 
+
+  Katki HA, Mark SD.  Survival Analysis for Cohorts with Missing
+  Covariate Information.  R-News, 8(1) 14-9, 2008.
+  http://www.r-project.org/doc/Rnews/Rnews_2008-1.pdf
 
   Mark, S.D. and Katki, H.A. Specifying and Implementing Nonparametric and
   Semiparametric Survival Estimators in Two-Stage (sampled) Cohort Studies with

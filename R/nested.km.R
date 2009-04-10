@@ -2,7 +2,7 @@ nested.km <-
   ##
   # Compute Kaplan-Meier non-parametric survival within groups defined by strata
   # using pihat weights for studies nested within cohorts.
-  # By: Hormuzd Katki 6/10/04
+  # By: Hormuzd Katki 4/10/09
   #
   # DO NOT USE ANY STRATA() STATEMENTS (which is illegal for survfit())
   # No left truncation, no late entry allowed -- everyone must enter at a chosen time zero
@@ -175,9 +175,9 @@ if (is.na(exposureindex <- pmatch(exposureofinterest,allexposures))) {
 
 # Use the name of what this program matched to the user's exposureofinterest, so that user
 # knows what his argument got matched to, since this is what is used by this program.
-# Using survmod$strata.all includes the names of the variables on the data frame that were
+# Using survmod$strata includes the names of the variables on the data frame that were
 # used.
-exposureofinterest <- names(survmod$strata.all)[exposureindex]
+exposureofinterest <- names(survmod$strata)[exposureindex]
 
 
 # This line breaks the dataframe data into data.frames (by applying the function
@@ -387,7 +387,7 @@ rownames(riskdifftable) <- paste(allexposures[exposureindex],"-",
                                  allexposures[-exposureindex])
 
 # Get the variable(s) name(s) that were used to make the strata
-exposurenames <- unlist(strsplit(names(survmod$strata.all)[1],split="=",fixed=TRUE))[1]
+exposurenames <- unlist(strsplit(names(survmod$strata)[1],split="=",fixed=TRUE))[1]
 cat("\n")
 cat(c("Risk Differences vs.",exposureofinterest,"by time",timeofinterest,"\n"))
 print(riskdifftable)

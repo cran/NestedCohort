@@ -2,7 +2,7 @@ nested.stdsurv <-
   ##
   # Compute Cox model survival and PAR, standardized for confounders, for studies nested
   # within cohorts.
-  # By: Hormuzd Katki 3/4/04
+  # By: Hormuzd Katki 4/10/09
   #
   #   exposures: The exposures of interest, must be factor variables
   # confounders: The confounders of interest, must be factor variables

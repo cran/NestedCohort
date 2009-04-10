@@ -55,8 +55,8 @@ nested.stdsurv(outcome, exposures, confounders, samplingmod, data,
   \item{glmlink}{ Sampling model link function, default is logistic regression }
   \item{glmcontrol}{ See \code{\link{glm.control}} }
   \item{coxphcontrol}{ See \code{\link{coxph.control}} }
-  \item{missvarwarn} { Warn if there is missing data in the sampling
-	 variable. default is true }
+  \item{missvarwarn}{ Warn if there is missing data in the sampling
+	 variable. Default is TRUE }
   \item{\dots}{ Any additional arguments to be passed on to \code{glm}
 	 or \code{coxph} }
 }
@@ -67,19 +67,21 @@ nested.stdsurv(outcome, exposures, confounders, samplingmod, data,
   some sampling probabilities are estimated at 1, the model technically
   cannot converge, but you get very close to 1, and \code{nested.stdsurv}
   will not report non-convergence for this situation.
-  
-  \item{1. }{ The data must be in a dataframe and specified in the data statement}
-  \item{2. }{ No variable can be named 'o.b.s.e.r.v.e.d.' or 'p.i.h.a.t.'}
-  \item{3. }{ Cases and controls cannot be finely matched on time, but
-	 frequency matching on time within large strata is allowed }
-  \item{4. }{ strata(), cluster() or offset() statements in
-	 exposures or confounders are not allowed}
-  \item{5. }{ Everyone must enter the cohort at the same time on the
-	 chosen survival time scale.}
-  \item{6. }{ Must use Breslow Tie-Breaking}
-  \item{7. }{ All covariates must be factor variables, even if binary}
-  \item{8. }{ Do not use '*' to mean interaction in exposures or
-  confounders, use \code{\link{interaction}}}
+
+  Note the following issues.  
+
+  The data must be in a dataframe and specified in the data statement. 
+  No variable can be named 'o.b.s.e.r.v.e.d.' or 'p.i.h.a.t.'.
+  Cases and controls cannot be finely matched on time, but
+  matching on time within large strata is allowed. 
+  strata(), cluster() or offset() statements in
+  or confounders are not allowed.
+  Everyone must enter the cohort at the same time on the
+  vival time scale.
+  Must use Breslow Tie-Breaking.
+  All covariates must be factor variables, even if binary.
+  Do not use '*' to mean interaction in exposures or
+  confounders, use \code{\link{interaction}}.
 }
 
 \value{
@@ -102,6 +104,10 @@ nested.stdsurv(outcome, exposures, confounders, samplingmod, data,
 }
 
 \references{ 
+
+  Katki HA, Mark SD.  Survival Analysis for Cohorts with Missing
+  Covariate Information.  R-News, 8(1) 14-9, 2008.
+  http://www.r-project.org/doc/Rnews/Rnews_2008-1.pdf
 
   Mark, S.D. and Katki, H.A. Specifying and Implementing Nonparametric and
   Semiparametric Survival Estimators in Two-Stage (sampled) Cohort Studies with
