@@ -27,7 +27,6 @@
      "bex"
      "eex")
     (TeX-run-style-hooks
-     "apalike"
      "psfig"
      "fullpage"
      "latex2e"

@@ -43,7 +43,8 @@ survival and attributable risk estimates, used nested.stdsurv().
 \keyword{ survey }
 
 \seealso{
-~~ \code{\link[survival:survival-package]{survival}} ~~
+  The survival package and the survey package
+%~~ \code{\link[survival:survival-package]{survival}} ~~
 }
 \examples{
 

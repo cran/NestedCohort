@@ -7,7 +7,7 @@
 \usepackage{fullpage}
 \usepackage{psfig}
 %\usepackage{S}
-\usepackage{apalike}
+%\usepackage{apalike}
 \newcommand{\bex}{\begin{Example}}
   \newcommand{\eex}{\end{Example}}
                                 % Use {Ex} for \large font S-PLUS code, {EXAMPLE} for \Huge

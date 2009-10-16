@@ -1,10 +1,10 @@
 Package: NestedCohort
-Version: 1.1-1
-Date: 2009-04-10
+Version: 1.1-2
+Date: 2009-10-16
 Title: Survival Analysis for Cohorts with Missing Covariate Information
 Author: Hormuzd A. Katki <katkih@mail.nih.gov>
 Maintainer: Hormuzd A. Katki <katkih@mail.nih.gov>
-Depends: R (>= 2.9.0), survival, MASS
+Depends: R (>= 2.8.1), survival, MASS
 Description: Estimate hazard ratios, survival curves and attributable
         risks for cohorts with missing covariates, using Cox models or
         Kaplan-Meier estimated for strata.  This handles studies nested
@@ -13,6 +13,6 @@ Description: Estimate hazard ratios, survival curves and attributable
         http://www.r-project.org/doc/Rnews/Rnews_2008-1.pdf
 License: Unlimited
 URL: http://dceg.cancer.gov/about/staff-bios/katki-hormuzd
-Packaged: 2009-04-15 14:12:05 UTC; katkih
+Packaged: 2012-10-29 08:57:20 UTC; ripley
 Repository: CRAN
-Date/Publication: 2009-04-15 18:13:15
+Date/Publication: 2012-10-29 08:57:21
