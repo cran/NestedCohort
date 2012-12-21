@@ -143,7 +143,7 @@ scores <- matrix(observed-pihat,nrow=n,ncol=length(samplingmod$coeff)) * samplin
 # Fit the Non-parametric model with weights, to all strata.  The estimates will be
 # correct, but their standard errors will be totally wrong; all of the lines after this
 # will produce the correct standard error
-survmod <- survfit(as.formula(survfitformula), type="fl",weights=1/p.i.h.a.t.,
+survmod <- survfit(as.formula(survfitformula), type="fl",weights=1/pihat,
                    na.action=na.omit,data=data,...)
 
 # Only keep those who are not missing lifetime or event indicator

@@ -121,38 +121,42 @@ coxmod <- nested.coxph(coxformula="Surv(futime01,ec01==1)~
 summary(coxmod)
 
 # This is the output:
-#  Call:
-#  coxph(formula = as.formula(coxformula), data = data, weights = 1/p.i.h.a.t., 
-#      na.action = na.omit, control = coxphcontrol, method = "breslow", 
-#      x = T)
+# Call:
+# coxph(formula = as.formula(coxformula), data = data, weights = 1/p.i.h.a.t., 
+# subset = TRUE, na.action = na.omit, control = coxphcontrol, 
+# x = TRUE, method = "breslow")
 
-#    n=123 (308 observations deleted due to missing)
-#                               coef exp(coef) se(coef)       z       p
-#  sexMale                    0.2953     1.344   0.5558  0.5313 6.0e-01
-#  agepill                    0.0539     1.055   0.0275  1.9612 5.0e-02
-#  smokeEver                  0.0145     1.015   0.5870  0.0248 9.8e-01
-#  drinkEver                 -0.8548     0.425   0.5896 -1.4497 1.5e-01
-#  mildyspMild Dysplasia      0.9023     2.465   0.3937  2.2921 2.2e-02
-#  moddyspModerate Dysplasia  1.3309     3.784   0.4212  3.1600 1.6e-03
-#  sevdyspSevere Dysplasia    2.1334     8.444   0.4615  4.6224 3.8e-06
-#  anyhistFamily History      0.0904     1.095   0.3896  0.2321 8.2e-01
-#  zncent                    -0.2498     0.779   0.1351 -1.8487 6.4e-02
+# n= 123, number of events= 56 
+# (308 observations deleted due to missingness)
 
-#                            exp(coef) exp(-coef) lower .95 upper .95
-#  sexMale                       1.344      0.744     0.452      3.99
-#  agepill                       1.055      0.948     1.000      1.11
-#  smokeEver                     1.015      0.986     0.321      3.21
-#  drinkEver                     0.425      2.351     0.134      1.35
-#  mildyspMild Dysplasia         2.465      0.406     1.140      5.33
-#  moddyspModerate Dysplasia     3.784      0.264     1.658      8.64
-#  sevdyspSevere Dysplasia       8.444      0.118     3.417     20.86
-#  anyhistFamily History         1.095      0.914     0.510      2.35
-#  zncent                        0.779      1.284     0.598      1.02
+#                              coef exp(coef) se(coef)     z Pr(>|z|)    
+# sexMale                    0.2953    1.3436   0.5558  0.53   0.5952    
+# agepill                    0.0539    1.0554   0.0275  1.96   0.0499 *  
+# smokeEver                  0.0145    1.0146   0.5870  0.02   0.9803    
+# drinkEver                 -0.8548    0.4254   0.5896 -1.45   0.1471    
+# mildyspMild Dysplasia      0.9023    2.4653   0.3937  2.29   0.0219 *  
+# moddyspModerate Dysplasia  1.3309    3.7845   0.4212  3.16   0.0016 ** 
+# sevdyspSevere Dysplasia    2.1334    8.4439   0.4615  4.62  3.8e-06 ***
+# anyhistFamily History      0.0904    1.0946   0.3896  0.23   0.8165    
+# zncent                    -0.2498    0.7789   0.1351 -1.85   0.0645 .  
 
-#  Rsquare= NA   (max possible= NA )
-#  Likelihood ratio test= NA  on 9 df,   p=NA
-#  Wald test            = 66.5  on 9 df,   p=7.32e-11
-#  Score (logrank) test = NA  on 9 df,   p=NA
+#                           exp(coef) exp(-coef) lower .95 upper .95
+# sexMale                       1.344      0.744     0.452      3.99
+# agepill                       1.055      0.948     1.000      1.11
+# smokeEver                     1.015      0.986     0.321      3.21
+# drinkEver                     0.425      2.351     0.134      1.35
+# mildyspMild Dysplasia         2.465      0.406     1.140      5.33
+# moddyspModerate Dysplasia     3.784      0.264     1.658      8.64
+# sevdyspSevere Dysplasia       8.444      0.118     3.417     20.86
+# anyhistFamily History         1.095      0.914     0.510      2.35
+# zncent                        0.779      1.284     0.598      1.02
+
+# Concordance= NA  (se = NA )
+# Rsquare= NA   (max possible= NA )
+# Likelihood ratio test= NA  on 9 df,   p=NA
+# Wald test            = 65.1  on 9 df,   p=1.36e-10
+# Score (logrank) test = NA  on 9 df,   p=NA
 }
 
 \keyword{ models }% at least one, from doc/KEYWORDS
+

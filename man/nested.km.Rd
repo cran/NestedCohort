@@ -137,8 +137,8 @@ mod <- nested.km(survfitformula="Surv(futime01,ec01==1)~znquartiles",
 #  Q1 - Q3         -0.1749 0.1145     -0.3993      0.04945
 #  Q1 - Q4         -0.2818 0.1042     -0.4859     -0.07760
 
-plot(mod,ymin=.6,xlab="Time (Days)",ylab="Survival",main="Survival by Quartile of Zinc",
-     legend.text=c("Q1","Q2","Q3","Q4"),lty=1:4,legend.pos=c(2000,.7))
+plot(mod,ymin=.6,xlab="Time (Days)",ylab="Survival",main="Survival by Quartile of Zinc",lty=1:4,)
+legend(2000,0.7,c("Q1","Q2","Q3","Q4"),lty=1:4)
 }
 
 \keyword{ models }% at least one, from doc/KEYWORDS

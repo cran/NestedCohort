@@ -167,10 +167,9 @@ mod <- nested.stdsurv(outcome="Surv(futime01,ec01==1)",
 #  Q4 - Q3             0.1866 0.09355    0.003196       0.3699
 #  Q4 - Crude          0.1126 0.06353   -0.011871       0.2372
 
-#  PAR if everyone had znquartiles = Q4 
-#             Estimate StdErr 95% PAR CI Left 95% PAR CI Right
-#  PAR          0.5084 0.2777        -0.03585           1.0526
-#  log(1-PAR)  -0.7100 0.5648        -0.48723           0.8375
+# PAR if everyone had znquartiles = Q4 
+#     Estimate StdErr 95% PAR CI Left 95% PAR CI Right
+# PAR   0.5084 0.2777         -0.4872           0.8375
 }
 
  

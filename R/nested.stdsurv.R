@@ -151,8 +151,8 @@ scores <- matrix(observed-pihat,nrow=n,ncol=length(samplingmod$coeff)) * samplin
 # mislead yourself into thinking that the robust variance is the correct variance.  coxmod
 # <- coxph(as.formula(coxformula), weights=1/pihat,method="breslow",na.action=na.omit,x=TRUE,
 # data=data,control=coxph.control(eps=1e-10,iter.max=50),...)
-coxmod <- coxph(as.formula(coxformula), weights=1/p.i.h.a.t.,method="breslow",
-                na.action=na.omit, x=TRUE, subset=TRUE , control=coxphcontrol, data=data,...)
+coxmod <- coxph(as.formula(coxformula), weights=1/pihat,method="breslow",
+                na.action=na.omit, x=TRUE, y=TRUE, subset=TRUE , control=coxphcontrol, data=data)
 
 # Get the influence function for the betahats, set to zero for everyone with missing
 # covariates.

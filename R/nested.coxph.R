@@ -91,7 +91,7 @@ suppressWarnings(
                  )
 
 # Get the estimated pihats to use for weighting.
-pihat <- data$p.i.h.a.t. <- predict(samplingmod,type='response')
+data$p.i.h.a.t. <- pihat  <- predict(samplingmod,type='response')
 
 # If any pihats are exactly zero, stop right here -- cannot make estimates!
 if ( any(pihat==0) )
@@ -120,8 +120,9 @@ scores <- matrix(observed-pihat,nrow=n,ncol=length(samplingmod$coeff)) * samplin
 
 # Fit Cox model, weight by 1/pihat, don't use robust=TRUE or cluster() so that you don't
 # mislead yourself into thinking that the robust variance is the correct variance.
-coxmod <- coxph(as.formula(coxformula), weights=1/p.i.h.a.t., method="breslow", robust=FALSE,
+coxmod <- coxph(as.formula(coxformula), weights=1/pihat, method="breslow",
                 na.action=na.omit, x=TRUE, subset=TRUE, control=coxphcontrol, data=data,...)
+
 
 # Get the influence function for the betahats, set to zero for everyone with missing
 # covariates. 
@@ -149,9 +150,10 @@ coxmod$var <- varbeta
 # The score test is not implemented
 ##
 
-# Invalidate the loglik and score 
+# Invalidate the loglik and score and concordance
 coxmod$loglik <- NA
 coxmod$score <- NA
+coxmod$concordance <- NA
 
 # Plug in the correct Wald test
 # This is the usual Wald test, variance estimated at the alternative
